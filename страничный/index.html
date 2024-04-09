@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Елаз медиа хостинг</title>
+  <link rel="stylesheet" href="index.css"> <!-- Ссылка на стиль -->
+  <script src="index.js"></script> <!-- Ссылка на функции -->
+  <script src="m.js"></script> <!-- Функции сайта -->
+</head>
+<body>
+  <h1>Медиа Хостинг</h1>
+<!-- TV-1 -->
+  <div class="preview"><iframe src="tv1.html"></iframe></div> <!-- Превью -->
+<div class="container">
+  <br>
+  <div class="window" onclick="window.location.href='tv1.html'">TV-1</div>
+  <!-- Смена текста бегущей строки -->
+  <input type="text" id="newText">
+  <button onclick="changeMarqueeText()">Сохранить</button>
+  <br>
+  <input type="file" class="button" id="fileInput" onchange="uploadFile(this.files,'player', 'tv1')"> <!-- Кнопка "Добавить файл" -->
+  <div class="file-list" id="fileList1"></div> <!-- Названия добавленных файлов -->
+  <button onclick="deleteAllFiles()">Удалить все файлы</button> <!-- Кнопка для удаления файлов на -->
+  <br><br>
+</div>
+
+<!-- TV-2 -->
+  <div class="preview"><iframe src="tv2.html"></iframe></div> <!-- Превью -->
+<div class="container">
+  <br>
+  <div class="window" onclick="window.location.href='tv2.html'">TV-2</div>
+  <!-- Смена текста бегущей строки -->
+  <input type="text" id="newText">
+  <button onclick="changeMarqueeText2()">Сохранить</button>
+  <br>
+  <div class="file-list" id="fileList2"></div> <!-- Названия добавленных файлов -->
+  <input type="file" class="button" onchange="uploadFile(this.files, 'tv2')"> <!-- Кнопка "Добавить файл"  -->
+  <button onclick="deleteFiles('tv2')">Удалить файлы на TV-2</button> <!-- Кнопка для удаления файлов -->
+ <br><br>
+</div>
+
+<!-- TV-3 -->
+  <div class="preview"><iframe src="tv3.html"></iframe></div><!-- Превью -->
+<div class="container">
+  <br>
+  <div class="window" onclick="window.location.href='tv3.html'">TV-3</div>
+  <!-- Смена текста бегущей строки -->
+  <input type="text" id="newText">
+  <button onclick="changeMarqueeText3()">Сохранить</button>
+  <br>
+  <div class="file-list" id="fileList3"></div> <!-- Названия добавленных файлов -->
+  <input type="file" class="button" onchange="uploadFile(this.files, 'tv3')"> <!-- Кнопка "Добавить файл" -->
+  <button onclick="deleteFiles('tv3')">Удалить файлы на TV-3</button> <!-- Кнопка для удаления файлов -->
+  <br><br>
+</div>
+
+      <script> </script>
+
+</body>
+</html>
+
+
+<!-- http://www.elaz.local/ekran/index.php

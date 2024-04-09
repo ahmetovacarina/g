@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV-1</title>
+    <link rel="stylesheet" href="https://vjs.zencdn.net/7.11.4/video-js.css"> <!-- Стили Video.js -->
+    <link rel="stylesheet" href="styles.css"> <!-- Ссылка на стиль -->
+    
+    <script src="m.js"></script> <!-- Функции сайта -->
+    <!-- <script src="index.js"></script> -->
+
+    <script src="//widget.time.is/ru.js"></script> <!-- Виджет даты -->
+    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script> <!-- Виджет времени -->
+    <script async src="https://app2.weatherwidget.org/js/?id=ww_17b9b647fac6f"></script> <!-- Виджет погоды -->
+</head>
+<body>
+<!-- Бегущая строка -->
+<marquee 
+   class="marquee" id="marqueeText"> Вас приветствует АО "ПО ЕлАЗ"!
+</marquee>
+<!-- Функция для изменения текста бегущей строки -->
+    <script>
+    function changeMarqueeText(newText) {
+        document.getElementById('marqueeText').innerText = newText;
+    }
+    </script>
+
+<!-- Объединенный контейнер -->
+<div class="containers"> 
+    <!-- Контейнер виджетов --> 
+    <div class="content-container"> 
+        <!-- Картинка --> 
+        <img src="elaz.png" class="logo"> 
+    
+        <!-- Часы --> 
+        <a href="https://time.is/Yelabuga" id="time_is_link" class="time" rel="nofollow" style="font-size:36px"></a>
+            <span id="Yelabuga_z71d" style="font-size:42px"></span>  
+            <script>
+                time_is_widget.init({Yelabuga_z71d:{template:"DATE", date_format:"dayname daynum.monthnum.yy"}});
+            </script>
+         <!-- Дата -->    
+            <iframe src="https://s.prtv.su/informers/clock/clock_digital.php?
+            &dig_color_font=%23000000&city=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0" 
+            class="date" frameborder="0">
+        </iframe> 
+
+        <!-- Погода --> 
+        <div id="ww_17b9b647fac6f"
+        class="weather" v='1.3' loc='id' 
+         a='{"t":"responsive","lang":"ru","ids":["wl4590"],
+         "font":"Arial","sl_ics":"one_a","sl_sot":"celsius",
+         "cl_bkg":"#FFFFFF00","cl_font":"rgba(255,255,255,1)",
+         "cl_cloud":"#d4d4d4","cl_persp":"#2196F3","cl_sun":"#FFC107",
+         "cl_moon":"#FFC107","cl_thund":"#FF5722","sl_tof":"5",
+         "el_nme":3,"cl_odd":"rgba(0,0,0,0)"}'>Погода для следующего местоположения: 
+         <a href="https://mapfx.org/карта_спутник_набережные_челны.html" 
+         id="ww_17b9b647fac6f_u" target="_blank">Набережные Челны на карте</a>
+        </div>
+        
+        <!-- Кнопка "На главную" -->
+        <div class="back-button" 
+            onclick="window.location.href='index.html'"> Главная
+        </div>
+    </div>
+
+
+    <!-- Контейнер плеера --> 
+    <div class="player-container"> 
+    <!-- <div class="preview"><iframe src="http://www.elaz.local/ekran/index.php"></iframe></div> Превью -->
+         <video id="player" 
+            class="player" 
+            controls preload="auto"  
+            autoplay loop muted>
+
+        </video>
+      <!--  <ul id="fileList1"></ul> Для отображения списка добавленных файлов -->
+    </div>
+</div>
+
+</body>
+</html>
